@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <Extern href="stdidcmd.h"/>
+    <Extern href="vsshlids.h"/>
+    <Include href="KnownImageIds.vsct"/>
+
+    <Commands package="guidPackage">
+        <Buttons>
+            <Button guid="guidOpenInWindowsTerminalCmdSet" id="OpenInWindowsTerminal" priority="0x0500" type="Button">
+                <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_FOLDER_EXPLORE" />
+                <Strings>
+                    <ButtonText>Open in Windows &amp;Terminal</ButtonText>
+                </Strings>
+            </Button>
+        </Buttons>
+    </Commands>
+
+    <CommandPlacements>
+        <CommandPlacement guid="guidOpenInWindowsTerminalCmdSet" id="OpenInWindowsTerminal" priority="0x0500">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_EXPLORE"/>
+        </CommandPlacement>
+        <CommandPlacement guid="guidOpenInWindowsTerminalCmdSet" id="OpenInWindowsTerminal" priority="0x0500">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_EXPLORE"/>
+        </CommandPlacement>
+        <CommandPlacement guid="guidOpenInWindowsTerminalCmdSet" id="OpenInWindowsTerminal" priority="0x0500">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_OPEN"/>
+        </CommandPlacement>
+    </CommandPlacements>
+
+    <Symbols>
+        <!-- This is the package guid. -->
+        <GuidSymbol name="guidPackage" value="{84C6ADE0-2DA3-4306-A182-01490F011492}" />
+
+        <GuidSymbol name="guidOpenInWindowsTerminalCmdSet" value="{0232B9F6-1DE1-40D2-831B-D52ABA00ED41}">
+            <IDSymbol name="OpenInWindowsTerminal" value="0x0100" />
+        </GuidSymbol>
+    </Symbols>
+</CommandTable>
